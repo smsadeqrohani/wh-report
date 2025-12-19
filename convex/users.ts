@@ -1,6 +1,5 @@
 import { query, mutation, action } from "./_generated/server";
 import { v } from "convex/values";
-import { api } from "./_generated/api";
 
 export const getCurrentUser = query({
   handler: async (ctx) => {
@@ -169,7 +168,7 @@ export const createAuthAccount = action({
     password: v.string(),
     convexUrl: v.string(),
   },
-  handler: async (ctx, args): Promise<void> => {
+  handler: async (_ctx, args): Promise<void> => {
     // Call Convex auth signup endpoint
     const authUrl = `${args.convexUrl}/auth/signin`;
     

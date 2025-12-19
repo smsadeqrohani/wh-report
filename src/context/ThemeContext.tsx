@@ -79,7 +79,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     if (savedTheme) return; // User has manually set theme, don't listen to system changes
 
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e: MediaQueryListEvent) => {
+    const handleChange = (_e: MediaQueryListEvent) => {
       // Always use dark (dark-first approach)
       // User can manually toggle if they want light mode
       setTheme("dark");

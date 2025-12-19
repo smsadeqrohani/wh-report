@@ -1,5 +1,5 @@
 import { useState, FormEvent } from "react";
-import { useQuery, useMutation } from "convex/react";
+import { useMutation } from "convex/react";
 import { useAuthActions } from "@convex-dev/auth/react";
 import { EyeCloseIcon, EyeIcon } from "../../icons";
 import Label from "../form/Label";
